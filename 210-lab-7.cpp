@@ -5,6 +5,10 @@
 #include <iostream>
 using namespace std;
 
+void displayArray(string*);
+string* reverseArray(string*);
+
+
 int main (){
 
     return 0;
