@@ -32,12 +32,20 @@ int main (){
     cout << *(data + 3) << " ";
     cout << *(data + 4) << endl;
 
+    //new dynamic array for reversed array
+    string *reversedData = nullptr;
+    reversedData = reverseArray(data);
+
     cout << "Original array: ";
     displayArray(data);
     cout << endl;
 
+    cout << "Reversed array: ";
+    displayArray(reversedData);
+
     // delete array when done
     delete [] data;
+    delete [] reversedData;
 
     return 0;
 }
@@ -54,7 +62,7 @@ string* reverseArray(string *arr) {
     tempData = new string[SIZE];
 
     for (int i = 0; i < SIZE; i++) {
-        *(tempData + i) = *(arr + (SIZE - i));
+        *(tempData + i) = *(arr + (SIZE - i -1));
     }
     return tempData;
 }
