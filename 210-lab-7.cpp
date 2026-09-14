@@ -32,8 +32,18 @@ int main (){
     cout << *(data + 3) << " ";
     cout << *(data + 4) << endl;
 
+    displayArray(data);
+
     // delete array when done
     delete [] data;
 
     return 0;
+}
+
+void displayArray(string *arr) {
+    cout << "The array: ";
+
+    for (int i = 0; i < SIZE; i++) {
+        cout << *(arr + i);
+    }
 }
