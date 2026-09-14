@@ -32,7 +32,9 @@ int main (){
     cout << *(data + 3) << " ";
     cout << *(data + 4) << endl;
 
+    cout << "Original array: ";
     displayArray(data);
+    cout << endl;
 
     // delete array when done
     delete [] data;
@@ -41,9 +43,9 @@ int main (){
 }
 
 void displayArray(string *arr) {
-    cout << "The array: ";
 
     for (int i = 0; i < SIZE; i++) {
-        cout << *(arr + i);
+        cout << *(arr + i) << " ";
+        cout << endl;
     }
 }
