@@ -49,3 +49,12 @@ void displayArray(string *arr) {
         cout << endl;
     }
 }
+string* reverseArray(string *arr) {
+    string *tempData = nullptr;
+    tempData = new string[SIZE];
+
+    for (int i = 0; i < SIZE; i++) {
+        *(tempData + i) = *(arr + (SIZE - i));
+    }
+    return tempData;
+}
