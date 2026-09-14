@@ -26,22 +26,20 @@ int main (){
     *(data + 3) = "Joe";
     *(data + 4) = "Junio";
 
-    cout << *(data + 0) << " ";
-    cout << *(data + 1) << " ";
-    cout << *(data + 2) << " ";
-    cout << *(data + 3) << " ";
-    cout << *(data + 4) << endl;
-
     //new dynamic array for reversed array
     string *reversedData = nullptr;
     reversedData = reverseArray(data);
 
     cout << "Original array: ";
+
     displayArray(data);
+    cout << endl;
     cout << endl;
 
     cout << "Reversed array: ";
+
     displayArray(reversedData);
+    cout << endl;
 
     // delete array when done
     delete [] data;
@@ -54,9 +52,9 @@ void displayArray(string *arr) {
 
     for (int i = 0; i < SIZE; i++) {
         cout << *(arr + i) << " ";
-        cout << endl;
     }
 }
+
 string* reverseArray(string *arr) {
     string *tempData = nullptr;
     tempData = new string[SIZE];
